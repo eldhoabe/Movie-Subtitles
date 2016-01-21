@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Movie_SubTitles.Helpers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,11 @@ namespace Movie_SubTitles
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        public  MainWindow()
         {
             InitializeComponent();
+
+            new Client("http://subsmax.com/api/10/").GetSubtitleAsync("IronMan");
         }
     }
 }

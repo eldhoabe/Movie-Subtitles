@@ -48,11 +48,13 @@ namespace Movie_SubTitles.Helpers
         object SearchSubtitles(string token, subtitleStucr[] stuctarray);
 
 
-        struct subtitleStucr
-        {
-            public string sublanguageid;
-            public string moviehash;
-            public double moviebytesize;
-        };
+        
     }
+
+    public struct subtitleStucr
+    {
+        public string sublanguageid;
+        public string moviehash;
+        public double moviebytesize;
+    };
 }
