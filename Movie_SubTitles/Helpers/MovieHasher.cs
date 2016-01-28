@@ -9,17 +9,28 @@ namespace Movie_SubTitles.Helpers
 {
     public class MovieHasher
     {
-        private static byte[] ComputeMovieHash(string filename)
+        //public static byte[] ComputeMovieHash(string filename)
+        //{
+        //    byte[] result;
+        //    using (Stream input = File.OpenRead(filename))
+        //    {
+        //        result = ComputeMovieHash(input);
+        //    }
+        //    return result;
+        //}
+
+        public static string ComputeMovieHash(string filename)
         {
             byte[] result;
             using (Stream input = File.OpenRead(filename))
             {
                 result = ComputeMovieHash(input);
             }
-            return result;
+
+            return ToHexadecimal(result);
         }
 
-        private static byte[] ComputeMovieHash(Stream input)
+        public static byte[] ComputeMovieHash(Stream input)
         {
             long lhash, streamsize;
             streamsize = input.Length;

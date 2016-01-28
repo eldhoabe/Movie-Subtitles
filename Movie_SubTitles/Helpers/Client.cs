@@ -7,11 +7,11 @@ using unirest_net.http;
 
 namespace Movie_SubTitles.Helpers
 {
-    public class Client
+    public class SubMaxClient
     {
 
         public string BaseApiUrl { get; set; }
-        public Client(string url)
+        public SubMaxClient(string url)
         {
             BaseApiUrl = url;
         }
